@@ -44,7 +44,6 @@ function getRandomTile() {
 }
 
 function setMole() {
-  
   if (gameOver) {
     return;
   }
@@ -91,7 +90,7 @@ function selectTile() {
   }
 
   if (this == currMoleTile && !clicked) {
-    score += 10;
+    score += 1;
     clicked = true;
     document.getElementById("score").innerText = score.toString(); //update score
   } else if (this == currPlantTile) {
