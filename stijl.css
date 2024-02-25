@@ -1,0 +1,104 @@
+
+body {
+    padding: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: url("./media/background.png");
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.geluid{
+    border: 2px solid rgb(101, 32, 32);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    margin:  auto;
+    background-image: url(./media/schors.png);
+}
+
+#board {
+    width: 560px;
+    height: 560px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background: url("./media/soil.png");
+    background-size: cover;
+    border: 3px solid white;
+    border-radius: 25px;
+    box-shadow: -5px 5px rgb(187, 170, 170);
+}
+
+#board div {
+    /* board = 560 x 560, divide into 3x3 tiles --> 186 x 186 per div */
+    width: 186px; 
+    height: 186px;
+    background-image: url("./media/tree.png");
+    background-size: cover;
+}
+
+#board div img {
+    /* all img tags inside tiles */
+    width: 100px;
+    height: 100px;
+    position: relative;
+    bottom: 3rem;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#play{
+    background-color: green;
+    width: 100px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    border-radius: 15px;
+    margin: 3vh auto;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#icon{width: 250px; height: 160px;}
+
+.legende img{
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    display: block;
+    left:2rem;
+    bottom:30rem;
+    padding: 1rem;
+    border: 5px solid rgb(46, 182, 46);
+    border-radius: 20px;
+    background-color: lightgreen;
+    box-shadow: -5px 5px green;
+}
+
+.legende img:nth-child(2){
+    bottom: 20rem;
+    background-color: rgb(234, 93, 93);
+    border: 5px solid rgb(216, 30, 30);
+    box-shadow: -5px 5px rgb(156, 23, 23);
+}
+
+.legende img:hover{
+    transform: rotate(360deg);
+    transition: 3s;
+}
+
+
