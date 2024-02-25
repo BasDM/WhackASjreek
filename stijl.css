@@ -36,7 +36,7 @@ body {
   /* board = 560 x 560, divide into 3x3 tiles --> 186 x 186 per div */
   width: 186px;
   height: 186px;
-  background-image: url("./media/tree.png");
+  background-image: url("./media/Tree.png");
   background-size: cover;
 }
 
