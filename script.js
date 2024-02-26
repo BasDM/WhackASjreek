@@ -34,8 +34,8 @@ function setGame() {
     let playButton = document.getElementById("play");
     playButton.addEventListener("click", startGame);
   }
-  setInterval(setMole, 1000); // every 1 second
-  setInterval(setPlant, 2000); // every 2 seconds
+  setInterval(setMole, 500); // every 0.5 second
+  setInterval(setPlant, 1000); // every 1 seconds
 }
 
 function getRandomTile() {
