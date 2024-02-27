@@ -4,6 +4,8 @@ let score = 0;
 let highScore = 0;
 let gameOver = true;
 let clicked = false;
+let moeilijkheidsGraad = 1;
+let running = false;
 
 function startGame() {
   document.getElementById("highScore").innerHTML =
@@ -12,6 +14,24 @@ function startGame() {
   document.getElementById("play").innerText = "Play";
   score = 0;
   gameOver = false;
+  if (moeilijkheidsGraad == 1 && !clicked) {
+    setInterval(setMole, 2000); // every 2 seconds
+    setInterval(setPlant, 2000);
+    clicked = true;
+  } else if (moeilijkheidsGraad == 2 && !clicked) {
+    setInterval(setMole, 1500); //every 1.5 second
+    setInterval(setPlant, 1500);
+    clicked = true;
+  } else if (moeilijkheidsGraad == 3 && !clicked) {
+    setInterval(setMole, 1000); //every 1 second
+    setInterval(setPlant, 1000);
+    clicked = true;
+  } else if (moeilijkheidsGraad == 4 && !clicked) {
+    setInterval(setMole, 700); //every .7 second
+    setInterval(setPlant, 700);
+    clicked = true;
+  }
+  running = true;
 }
 
 window.onload = function () {
@@ -34,8 +54,6 @@ function setGame() {
     let playButton = document.getElementById("play");
     playButton.addEventListener("click", startGame);
   }
-  setInterval(setMole, 500); // every 0.5 second
-  setInterval(setPlant, 1000); // every 1 seconds
 }
 
 function getRandomTile() {
@@ -116,3 +134,20 @@ icon.onclick = function playMusic() {
     icon.src = "./media/shrekClosed.png";
   }
 };
+
+let knop = document.querySelector(".legende div");
+
+let teller = 1;
+function tellen() {
+  if (teller == 5) {
+    teller = 1;
+  } else {
+    knop.innerHTML = [teller];
+    moeilijkheidsGraad = teller;
+    teller++;
+  }
+}
+
+if (!running) {
+  knop.onclick = tellen;
+}
