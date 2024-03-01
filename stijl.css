@@ -54,6 +54,8 @@ body {
   -ms-user-select: none;
 }
 
+h3{display: none;}
+
 #play {
   background-color: green;
   width: 100px;
@@ -118,6 +120,28 @@ a {
   border-radius: 10px;
 }
 
+#moeilijkKnop{
+  background-color: cyan;
+  color: black;
+  font-weight: bold;
+  font-size: 4rem;
+  box-shadow: -5px 5px rgb(125, 110, 177);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 20rem;
+  top: 42rem;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 
 @media(min-width:500px){
   body{
@@ -137,6 +161,8 @@ a {
   .legende img{
     left: 2rem;
     bottom: 35rem;
+    width: 150px;
+    height: 150px;
   }
   .legende img:nth-child(2){
     bottom: 20rem;
