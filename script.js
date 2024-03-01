@@ -150,4 +150,8 @@ function tellen() {
 
 if (!running) {
   knop.onclick = tellen;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5b6af62702f050f0b72d8d6164a702462f05aac8
